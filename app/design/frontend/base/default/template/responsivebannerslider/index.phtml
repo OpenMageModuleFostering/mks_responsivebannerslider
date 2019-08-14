@@ -1,40 +1,89 @@
-<link rel="stylesheet" href="<?php echo $this->getSkinUrl('mksslider/css/font-awesome.min.css'); ?>">
- 
-</head>
-<body>
- 
-  <div class="container">
-    <div id="slides">
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('responsiveslider/css/styles.css'); ?>" media="all">
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('responsiveslider/css/generic-nav.css'); ?>" media="all">
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('responsiveslider/css/grid12.css'); ?>" media="all">
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('responsiveslider/js/jquery-1.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('responsiveslider/js/jquery-noconflict.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('responsiveslider/js/jquery_004.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('responsiveslider/js/jquery_003.js'); ?>"></script> 
+
+
+<!-- BEGIN GOOGLE ANALYTICS CODEs -->
+
+
+<div class="the-slideshow-wrapper nested-container clearer">
+<div style="height: 428px;" class="the-slideshow gen-slider-arrows2 gen-slider-pager1 gen-slider-pager1-pos-bottom-right grid12-9  ">
+
+<ul class="slides">
 <?php 
 $connection = Mage::getSingleton('core/resource')->getConnection('core_write');
-$sql = $connection->query("select * from mksresponsivebannerslider");
+$sql = $connection->query("select * from mksresponsivebannerslider where status='0'");
 while($row1 = $sql->fetch())
 {
 $title = $row1["title"];
+$description = $row1["description"]; 
 $urlx = $row1["image"]; 
 $media_url =  Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
 $imgurl=$media_url.$urlx;
 ?>
-<img src="<?php echo $imgurl; ?>" alt="<?php echo $title; ?>">
-<?php } ?>     
+<li style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;" class="slide">
+<a href="#">
+<img src="<?php echo $imgurl; ?>" alt="<?php echo $title; ?>" title="<?php echo $title; ?>">
+<div class="caption dark3">
+<h2><?php echo $description; ?></h2>
+</div>
+<div class="caption dark1 top-right">
+<h2></h2>
+</div>
+</a></li>
+
+<?php } ?>
+</ul>
+<?php /* ?>
+<ol class="control-nav control-paging" style="display:none;">
+<li><a class="active">1</a></li>
+<li><a class="">2</a></li>
+<li><a class="">3</a></li>
+<li><a class="">4</a></li>
+</ol>
+<?php */ ?>
+<ul class="direction-nav">
+<li><a class="prev" href="#">Previous</a></li>
+<li><a class="next disabled" href="#">Next</a></li>
+</ul>
 </div>
 </div>
+
+<!-- BEGIN GOOGLE ANALYTICS CODEs -->
+
+
+<script type="text/javascript">
+//<![CDATA[
+//jQuery(function($) {
+jQuery(window).load(function(){
+jQuery('.the-slideshow').flexslider({
+namespace:"",
+animation:'fade',
+easing:'easeInOutCirc',
+useCSS:	false,
+animationLoop:0,
+smoothHeight: true,
+slideshowSpeed:5000,
+animationSpeed:	600,
+pauseOnHover:1
+});
+});
+//]]>
+</script>    
+
+
+
+
+
+
+
+
  
-<script src="<?php echo $this->getSkinUrl('mksslider/js/jquery-1.9.1.min.js'); ?>"></script>
-<script src="<?php echo $this->getSkinUrl('mksslider/js/jquery.slides.min.js'); ?>"></script>
-<script>
-    $(function() {
-      $('#slides').slidesjs({
-        width: 800,
-        height: 300,
-        play: {
-          active: true,
-          auto: true,
-          interval: 4000,
-          swap: true
-        }
-      });
-    });
-  </script>
  
+
+
  
