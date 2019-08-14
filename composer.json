@@ -3,10 +3,10 @@
     "type": "magento-module",
     "license": "OSL",
     "homepage": "",
-    "description": "Responsive banner slider extension in magento combine with different type of banner style. ",
+    "description": "Responsive Banner slider without any jQuery conflict issue Responsive Banner slider . Always use Responsive Banner slider.",
     "authors": [
     {
-        "name": "Mukesh Kumar Saini",
+        "name": "Mukesh Kumar saini",
         "email": "in.mukeshsaini@gmail.com"
     }
 ],

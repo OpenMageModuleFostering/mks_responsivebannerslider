@@ -1,22 +1,16 @@
-<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('responsiveslider/css/styles.css'); ?>" media="all">
-<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('responsiveslider/css/generic-nav.css'); ?>" media="all">
-<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('responsiveslider/css/grid12.css'); ?>" media="all">
-<script type="text/javascript" src="<?php echo $this->getSkinUrl('responsiveslider/js/jquery-1.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo $this->getSkinUrl('responsiveslider/js/jquery-noconflict.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo $this->getSkinUrl('responsiveslider/js/jquery_004.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo $this->getSkinUrl('responsiveslider/js/jquery_003.js'); ?>"></script> 
-
-
+<?php  require_once 'app/design/frontend/base/default/template/responsivebannerslider/config.phtml'; ?> 
 <!-- BEGIN GOOGLE ANALYTICS CODEs -->
-
-
+ 
+ 
 <div class="the-slideshow-wrapper nested-container clearer">
 <div style="height: 428px;" class="the-slideshow gen-slider-arrows2 gen-slider-pager1 gen-slider-pager1-pos-bottom-right grid12-9  ">
 
 <ul class="slides">
 <?php 
 $connection = Mage::getSingleton('core/resource')->getConnection('core_write');
-$sql = $connection->query("select * from mksresponsivebannerslider where status='0'");
+$prefix = Mage::getConfig()->getTablePrefix();
+$tblname=$prefix.'mksresponsivebannerslider';
+$sql = $connection->query("select * from $tblname where status='0'");
 while($row1 = $sql->fetch())
 {
 $title = $row1["title"];
@@ -38,18 +32,7 @@ $imgurl=$media_url.$urlx;
 
 <?php } ?>
 </ul>
-<?php /* ?>
-<ol class="control-nav control-paging" style="display:none;">
-<li><a class="active">1</a></li>
-<li><a class="">2</a></li>
-<li><a class="">3</a></li>
-<li><a class="">4</a></li>
-</ol>
-<?php */ ?>
-<ul class="direction-nav">
-<li><a class="prev" href="#">Previous</a></li>
-<li><a class="next disabled" href="#">Next</a></li>
-</ul>
+ 
 </div>
 </div>
 

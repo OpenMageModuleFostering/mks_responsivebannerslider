@@ -61,7 +61,7 @@
 .grid12-7	{ width:56.33%; }
 .grid12-8	{ width:64.67%; }
 .grid12-9,
-.grid4-3	{ width:73%; }
+.grid4-3	{ width:100%; }
 .grid12-10	{ width:81.33%; }
 .grid12-11	{ width:89.67%; }
 .grid12-12,
@@ -141,3 +141,6 @@
    Stretch inner grid unit (full width) */
 .container.stretched { width:96%; padding-left:0; padding-right:0; }
 .container.stretched .grid-full { width:100%; margin-left:0; margin-right:0; }
+
+
+.the-slideshow-wrapper ul li img{ width:100%!important;}
