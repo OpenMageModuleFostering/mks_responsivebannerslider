@@ -1,16 +1,17 @@
-/*
+/*.slides li{margin:0px !important; }
  * 12-column grid
  */
 
 
 
 /* Grid container */
+.slides li{margin:0px !important; }
 .container {
 	margin-left:auto;
 	margin-right:auto;
 }
 .nested-container {
-	width:102%;
+	width:100%;
 	margin-left:-1%;
 }
 

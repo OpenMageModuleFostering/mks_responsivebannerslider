@@ -2,7 +2,7 @@
 <config>
   <modules>
     <Mks_Responsivebannerslider>
-      <version>8.1.1</version>
+      <version>1.9.1</version>
     </Mks_Responsivebannerslider>
   </modules>
   <frontend>
@@ -42,9 +42,9 @@
 	  <responsivebannerslider_mysql4>
 		<class>Mks_Responsivebannerslider_Model_Mysql4</class>
 		<entities>		  
-			  <responsivebanner>
+			  <responsivebannerslider>
 				<table>mksresponsivebannerslider</table>
-			  </responsivebanner>
+			  </responsivebannerslider>
         </entities>
 	  </responsivebannerslider_mysql4>
 	</models>
@@ -91,11 +91,11 @@
 			<sort_order>0</sort_order>
 			<action>responsivebannerslider/adminhtml_responsivebannersliderbackend</action>
 		  </responsivebannersliderbackend>
-		  <responsivebanner module="responsivebannerslider">
-		    <title>Manage Responsivebanner</title>
+		  <responsivebannerslider module="responsivebannerslider">
+		    <title>Manage Responsivebannerslider</title>
 			<sort_order>0</sort_order>
-			<action>responsivebannerslider/adminhtml_responsivebanner</action>
-		  </responsivebanner>
+			<action>responsivebannerslider/adminhtml_responsivebannerslider</action>
+		  </responsivebannerslider>
 		</children>
 	  </responsivebannerslider>
 	</menu>
@@ -113,10 +113,10 @@
 		  <responsivebannersliderbackend translate="title">
 			<title>About Us</title>
 		  </responsivebannersliderbackend>
-		  <responsivebanner translate="title">
-			<title>Manage Responsivebanner</title>
+		  <responsivebannerslider translate="title">
+			<title>Manage Responsivebannerslider</title>
 			<sort_order>0</sort_order>
-		  </responsivebanner>
+		  </responsivebannerslider>
 			  </children>
 			</responsivebannerslider>
 		  </children>
