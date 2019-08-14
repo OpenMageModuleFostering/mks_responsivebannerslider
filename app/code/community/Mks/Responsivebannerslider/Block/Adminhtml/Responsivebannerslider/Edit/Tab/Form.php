@@ -10,12 +10,14 @@ class Mks_Responsivebannerslider_Block_Adminhtml_Responsivebannerslider_Edit_Tab
 
 				
 						$fieldset->addField("title", "text", array(
-						"label" => Mage::helper("responsivebannerslider")->__("Title"),
+						"label" => Mage::helper("responsivebannerslider")->__("Title"),					
+						"class" => "required-entry",
+						"required" => true,
 						"name" => "title",
 						));
 									
 						$fieldset->addField('image', 'image', array(
-						'label' => Mage::helper('responsivebannerslider')->__('Image'),
+						'label' => Mage::helper('responsivebannerslider')->__('Images'),
 						'name' => 'image',
 						'note' => '(*.jpg, *.png, *.gif)',
 						));
@@ -28,11 +30,18 @@ class Mks_Responsivebannerslider_Block_Adminhtml_Responsivebannerslider_Edit_Tab
 						"label" => Mage::helper("responsivebannerslider")->__("URL"),
 						"name" => "url",
 						));
+					
+						$fieldset->addField("imageorder", "text", array(
+						"label" => Mage::helper("responsivebannerslider")->__("Images Order"),
+						"name" => "imageorder",
+						));
 									
 						 $fieldset->addField('status', 'select', array(
 						'label'     => Mage::helper('responsivebannerslider')->__('Status'),
-						'values'   => Mks_Responsivebannerslider_Block_Adminhtml_Responsivebannerslider_Grid::getValueArray4(),
-						'name' => 'status',
+						'values'   => Mks_Responsivebannerslider_Block_Adminhtml_Responsivebannerslider_Grid::getValueArray5(),
+						'name' => 'status',					
+						"class" => "required-entry",
+						"required" => true,
 						));
 
 				if (Mage::getSingleton("adminhtml/session")->getResponsivebannersliderData())

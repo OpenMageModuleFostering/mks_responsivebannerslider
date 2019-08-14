@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
 <config>
 	  <tabs>
-		<mks_responsivebannersetting translate="label" module="responsivebannerslider">
-            <label>Mks_Responsive Baner</label>
+		<mksresponsibetab translate="label" module="responsivebannerslider">
+            <label>MKS RESPONSIVE BANNER</label>
             <sort_order>0</sort_order>
-        </mks_responsivebannersetting>
+        </mksresponsibetab>
 	  </tabs>
 	  <sections>
-		<general_setting  translate="label" module="responsivebannerslider">                    
+		<generalsetting  translate="label" module="responsivebannerslider">                    
 		<label>General Setting</label>
-		<tab>mks_responsivebannersetting</tab>
+		<tab>mksresponsibetab</tab>
 		<frontend_type>text</frontend_type>
 		<sort_order>0</sort_order>
 		<show_in_default>1</show_in_default>
 		<show_in_website>1</show_in_website>
 		<show_in_store>1</show_in_store>            
 					<groups>
-				      <banner_setting translate="label"> 
+				      <mksresponsivegroup translate="label"> 
 					  <label>Banner Setting</label>
 					  <frontend_type>text</frontend_type>
 					  <sort_order>0</sort_order>
@@ -24,42 +24,6 @@
 					  <show_in_website>1</show_in_website>
 					  <show_in_store>1</show_in_store>
 				       <fields>
-                          <baner_eanble translate="label">
-                            <label>Enable </label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
-                            <sort_order>0</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                          </baner_eanble>
-                          <slide_speed translate="label">
-                            <label>Slide Speed</label>
-							<frontend_type>text</frontend_type>
-                            <sort_order>0</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<comment>Example : 500</comment>
-                          </slide_speed>
-                          <banner_loop translate="label">
-                            <label>Banner Loop</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>0</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                          </banner_loop>
-                          <slide_type translate="label">
-                            <label>Style Type </label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_Diyoptions13946253323</source_model>
-                            <sort_order>0</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                          </slide_type>
                           <pauseonhover translate="label">
                             <label>Pause OnHover</label>
                             <frontend_type>select</frontend_type>
@@ -69,9 +33,45 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                           </pauseonhover>
+                          <styletype translate="label">
+                            <label>Style Type</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_Diyoptions14091220731</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </styletype>
+                          <bannerloop translate="label">
+                            <label>Banner Loop</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </bannerloop>
+                          <slidespeed translate="label">
+                            <label>Slide Speed</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Example :- 1000 , 1500 ,2000</comment>
+                          </slidespeed>
+                          <enable translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </enable>
 					   </fields>
-					   </banner_setting>
+					   </mksresponsivegroup>
 					</groups>
-		</general_setting>
+		</generalsetting>
 	  </sections>
 </config>

@@ -36,11 +36,15 @@ class Mks_Responsivebannerslider_Block_Adminhtml_Responsivebannerslider_Grid ext
 				"header" => Mage::helper("responsivebannerslider")->__("URL"),
 				"index" => "url",
 				));
+				$this->addColumn("imageorder", array(
+				"header" => Mage::helper("responsivebannerslider")->__("Images Order"),
+				"index" => "imageorder",
+				));
 						$this->addColumn('status', array(
 						'header' => Mage::helper('responsivebannerslider')->__('Status'),
 						'index' => 'status',
 						'type' => 'options',
-						'options'=>Mks_Responsivebannerslider_Block_Adminhtml_Responsivebannerslider_Grid::getOptionArray4(),				
+						'options'=>Mks_Responsivebannerslider_Block_Adminhtml_Responsivebannerslider_Grid::getOptionArray5(),				
 						));
 						
 			$this->addExportType('*/*/exportCsv', Mage::helper('sales')->__('CSV')); 
@@ -69,17 +73,17 @@ class Mks_Responsivebannerslider_Block_Adminhtml_Responsivebannerslider_Grid ext
 			return $this;
 		}
 			
-		static public function getOptionArray4()
+		static public function getOptionArray5()
 		{
             $data_array=array(); 
 			$data_array[0]='Enable';
 			$data_array[1]='Disable';
             return($data_array);
 		}
-		static public function getValueArray4()
+		static public function getValueArray5()
 		{
             $data_array=array();
-			foreach(Mks_Responsivebannerslider_Block_Adminhtml_Responsivebannerslider_Grid::getOptionArray4() as $k=>$v){
+			foreach(Mks_Responsivebannerslider_Block_Adminhtml_Responsivebannerslider_Grid::getOptionArray5() as $k=>$v){
                $data_array[]=array('value'=>$k,'label'=>$v);		
 			}
             return($data_array);

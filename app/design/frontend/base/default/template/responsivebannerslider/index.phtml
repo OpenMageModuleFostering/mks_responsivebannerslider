@@ -7,15 +7,13 @@
 
 <?php
 // Module Enable/Dsable Function.......................................
-if($slide_status==1): ?>
+if($slide_status==1){ ?>
 
 
 
 <?php
 // Module type Function.......................................
-if($slide_type=='2'){ ?>
-
-
+if($slide_type=='1'){ ?>
 
 
 
@@ -39,7 +37,7 @@ if($slide_type=='2'){ ?>
 $connection = Mage::getSingleton('core/resource')->getConnection('core_write');
 $prefix = Mage::getConfig()->getTablePrefix();
 $tblname=$prefix.'mksresponsivebannerslider';
-$sql = $connection->query("select * from $tblname where status='0'");
+$sql = $connection->query("select * from $tblname where status='0'  ORDER BY imageorder ASC ");
 while($row1 = $sql->fetch())
 {
 $title = $row1["title"];
@@ -47,9 +45,10 @@ $description = $row1["description"];
 $urlx = $row1["image"]; 
 $media_url =  Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
 $imgurl=$media_url.$urlx;
+$url = $row1["url"]; 
 ?>
 <li style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;" class="slide">
-<a href="#">
+<a href="<?php echo $url; ?>">
 <img src="<?php echo $imgurl; ?>" alt="<?php echo $title; ?>" title="<?php echo $title; ?>">
 <div class="caption dark3">
 <h2><?php echo $description; ?></h2>
@@ -70,8 +69,9 @@ $imgurl=$media_url.$urlx;
 <script type="text/javascript">
 //<![CDATA[
 //jQuery(function($) {
-jQuery(window).load(function(){
-jQuery('.the-slideshow').flexslider({
+responsivemks = jQuery.noConflict(); 
+responsivemks(window).load(function(){
+responsivemks('.the-slideshow').flexslider({
 namespace:"",
 animation:'fade',
 easing:'easeInOutCirc',
@@ -94,7 +94,7 @@ pauseOnHover:<?php echo $slide_PauseOnhover; ?>
 
 <?php
 // Module type 1 Function.......................................Start
-if($slide_type=='1'){ ?>
+if($slide_type=='2'){ ?>
 
 
 
@@ -125,9 +125,10 @@ $description = $row1["description"];
 $urlx = $row1["image"]; 
 $media_url =  Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
 $imgurl=$media_url.$urlx;
+$url = $row1["url"]; 
 ?>
 <li class="slide">
-<a href="#">
+<a href="<?php echo $url; ?>">
 <img src="<?php echo $imgurl; ?>" alt="<?php echo $title; ?>" title="<?php echo $title; ?>">
 <div class="caption dark3">
 <h2><?php echo $description; ?></h2>
@@ -137,6 +138,10 @@ $imgurl=$media_url.$urlx;
 </div>
 </a></li>
 
+ 
+
+
+
 <?php } ?>
 </ul>
 </div>
@@ -144,8 +149,9 @@ $imgurl=$media_url.$urlx;
 <script type="text/javascript">
 //<![CDATA[
 //jQuery(function($) {
-jQuery(window).load(function(){
-jQuery('.the-slideshow').flexslider({
+responsivemks = jQuery.noConflict(); 
+responsivemks(window).load(function(){
+responsivemks('.the-slideshow').flexslider({
 namespace:"",
 animation:'slide',
 easing:'easeInOutCirc',
@@ -168,5 +174,11 @@ pauseOnHover:<?php echo $slide_PauseOnhover; ?>
  } ?>
 
 
-<?php  endif;  ?>
+ 
+
+<?php } else { ?>
+
+<h1 style="color:red;">Enable ( Responsive banner ) Module via Admin = System -> Configuration-> MKS RESPONSIVE BANNER-> General Setting </h1>
+
+ <?php } ?>
  
