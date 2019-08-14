@@ -1,5 +1,5 @@
 <?php
-class Mks_Responsivebannerslider_Block_Adminhtml_Responsivebannerslider_Edit_Form extends Mage_Adminhtml_Block_Widget_Form
+class Mks_Responsivebannerslider_Block_Adminhtml_Responsivebanner_Edit_Form extends Mage_Adminhtml_Block_Widget_Form
 {
 		protected function _prepareForm()
 		{

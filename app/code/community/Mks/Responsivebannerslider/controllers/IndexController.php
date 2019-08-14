@@ -3,7 +3,7 @@ class Mks_Responsivebannerslider_IndexController extends Mage_Core_Controller_Fr
     public function IndexAction() {
       
 	  $this->loadLayout();   
-	  $this->getLayout()->getBlock("head")->setTitle($this->__("Responsivebannerslider"));
+	  $this->getLayout()->getBlock("head")->setTitle($this->__("Mks_Responsivebannerslider"));
 	        $breadcrumbs = $this->getLayout()->getBlock("breadcrumbs");
       $breadcrumbs->addCrumb("home", array(
                 "label" => $this->__("Home Page"),
@@ -11,9 +11,9 @@ class Mks_Responsivebannerslider_IndexController extends Mage_Core_Controller_Fr
                 "link"  => Mage::getBaseUrl()
 		   ));
 
-      $breadcrumbs->addCrumb("responsivebannerslider", array(
-                "label" => $this->__("Responsivebannerslider"),
-                "title" => $this->__("Responsivebannerslider")
+      $breadcrumbs->addCrumb("mks_responsivebannerslider", array(
+                "label" => $this->__("Mks_Responsivebannerslider"),
+                "title" => $this->__("Mks_Responsivebannerslider")
 		   ));
 
       $this->renderLayout(); 

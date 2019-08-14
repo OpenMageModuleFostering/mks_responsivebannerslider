@@ -18,6 +18,8 @@ if($slide_type=='1'){ ?>
 
 
 
+
+
 <?php  $cssurl =  str_replace('index.php/','',$this->getUrl());?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/css/generic-nav.css'; ?>" media="all">
 <link rel="stylesheet" type="text/css" href="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/css/grid12.css'; ?>" media="all">
@@ -37,7 +39,7 @@ if($slide_type=='1'){ ?>
 $connection = Mage::getSingleton('core/resource')->getConnection('core_write');
 $prefix = Mage::getConfig()->getTablePrefix();
 $tblname=$prefix.'mksresponsivebannerslider';
-$sql = $connection->query("select * from $tblname where status='0'  ORDER BY imageorder ASC ");
+$sql = $connection->query("select * from $tblname where status='0'");
 while($row1 = $sql->fetch())
 {
 $title = $row1["title"];
@@ -69,9 +71,8 @@ $url = $row1["url"];
 <script type="text/javascript">
 //<![CDATA[
 //jQuery(function($) {
-responsivemks = jQuery.noConflict(); 
-responsivemks(window).load(function(){
-responsivemks('.the-slideshow').flexslider({
+jQuery(window).load(function(){
+jQuery('.the-slideshow').flexslider({
 namespace:"",
 animation:'fade',
 easing:'easeInOutCirc',
@@ -138,10 +139,6 @@ $url = $row1["url"];
 </div>
 </a></li>
 
- 
-
-
-
 <?php } ?>
 </ul>
 </div>
@@ -149,9 +146,8 @@ $url = $row1["url"];
 <script type="text/javascript">
 //<![CDATA[
 //jQuery(function($) {
-responsivemks = jQuery.noConflict(); 
-responsivemks(window).load(function(){
-responsivemks('.the-slideshow').flexslider({
+jQuery(window).load(function(){
+jQuery('.the-slideshow').flexslider({
 namespace:"",
 animation:'slide',
 easing:'easeInOutCirc',
@@ -178,7 +174,7 @@ pauseOnHover:<?php echo $slide_PauseOnhover; ?>
 
 <?php } else { ?>
 
-<h1 style="color:red;">Enable ( Responsive banner ) Module via Admin = System -> Configuration-> MKS RESPONSIVE BANNER-> General Setting </h1>
+<h1 style="color:red;">Enable ( Responsive banner) Module via Admin = System -> Configuration-> General Setting </h1>
 
  <?php } ?>
  

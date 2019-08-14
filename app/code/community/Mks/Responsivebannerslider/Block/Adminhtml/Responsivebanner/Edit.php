@@ -1,6 +1,6 @@
 <?php
 	
-class Mks_Responsivebannerslider_Block_Adminhtml_Responsivebannerslider_Edit extends Mage_Adminhtml_Block_Widget_Form_Container
+class Mks_Responsivebannerslider_Block_Adminhtml_Responsivebanner_Edit extends Mage_Adminhtml_Block_Widget_Form_Container
 {
 		public function __construct()
 		{
@@ -8,7 +8,7 @@ class Mks_Responsivebannerslider_Block_Adminhtml_Responsivebannerslider_Edit ext
 				parent::__construct();
 				$this->_objectId = "id";
 				$this->_blockGroup = "responsivebannerslider";
-				$this->_controller = "adminhtml_responsivebannerslider";
+				$this->_controller = "adminhtml_responsivebanner";
 				$this->_updateButton("save", "label", Mage::helper("responsivebannerslider")->__("Save Item"));
 				$this->_updateButton("delete", "label", Mage::helper("responsivebannerslider")->__("Delete Item"));
 
@@ -30,9 +30,9 @@ class Mks_Responsivebannerslider_Block_Adminhtml_Responsivebannerslider_Edit ext
 
 		public function getHeaderText()
 		{
-				if( Mage::registry("responsivebannerslider_data") && Mage::registry("responsivebannerslider_data")->getId() ){
+				if( Mage::registry("responsivebanner_data") && Mage::registry("responsivebanner_data")->getId() ){
 
-				    return Mage::helper("responsivebannerslider")->__("Edit Item '%s'", $this->htmlEscape(Mage::registry("responsivebannerslider_data")->getId()));
+				    return Mage::helper("responsivebannerslider")->__("Edit Item '%s'", $this->htmlEscape(Mage::registry("responsivebanner_data")->getId()));
 
 				} 
 				else{

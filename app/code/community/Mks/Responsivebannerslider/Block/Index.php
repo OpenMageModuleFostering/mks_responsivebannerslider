@@ -3,7 +3,6 @@ class Mks_Responsivebannerslider_Block_Index extends Mage_Core_Block_Template{
 
 
 
-
 public function getResponsivebannersliderEnabled()
     {
         return Mage::getStoreConfig('generalsetting/mksresponsivegroup/enable',Mage::app()->getStore());
@@ -28,6 +27,6 @@ public function getResponsivebannerPauseOnhover()
     {
         return Mage::getStoreConfig('generalsetting/mksresponsivegroup/pauseonhover',Mage::app()->getStore());
     }
-
+ 
 
 }
