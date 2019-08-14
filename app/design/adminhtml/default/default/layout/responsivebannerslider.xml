@@ -5,9 +5,9 @@
 	  <block type="responsivebannerslider/adminhtml_responsivebannersliderbackend" name="responsivebannersliderbackend" template="responsivebannerslider/responsivebannersliderbackend.phtml"/>
 	</reference>
   </responsivebannerslider_adminhtml_responsivebannersliderbackend_index>
-  <responsivebannerslider_adminhtml_bannerslider_index>
+  <responsivebannerslider_adminhtml_responsivebannerslider_index>
 	<reference name="content">
-	  <block type="responsivebannerslider/adminhtml_bannerslider" name="bannerslider" />
+	  <block type="responsivebannerslider/adminhtml_responsivebannerslider" name="responsivebannerslider" />
 	</reference>
-  </responsivebannerslider_adminhtml_bannerslider_index>
+  </responsivebannerslider_adminhtml_responsivebannerslider_index>
 </layout>

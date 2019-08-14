@@ -1,9 +1,9 @@
 <?php
-class Mks_Responsivebannerslider_IndexController extends Mage_Core_Controller_Front_Action{
+class Mks_Bannerslider_IndexController extends Mage_Core_Controller_Front_Action{
     public function IndexAction() {
       
 	  $this->loadLayout();   
-	  $this->getLayout()->getBlock("head")->setTitle($this->__("Responsive banner slider"));
+	  $this->getLayout()->getBlock("head")->setTitle($this->__("Titlename"));
 	        $breadcrumbs = $this->getLayout()->getBlock("breadcrumbs");
       $breadcrumbs->addCrumb("home", array(
                 "label" => $this->__("Home Page"),
@@ -11,9 +11,9 @@ class Mks_Responsivebannerslider_IndexController extends Mage_Core_Controller_Fr
                 "link"  => Mage::getBaseUrl()
 		   ));
 
-      $breadcrumbs->addCrumb("responsive banner slider", array(
-                "label" => $this->__("Responsive banner slider"),
-                "title" => $this->__("Responsive banner slider")
+      $breadcrumbs->addCrumb("titlename", array(
+                "label" => $this->__("Titlename"),
+                "title" => $this->__("Titlename")
 		   ));
 
       $this->renderLayout(); 
