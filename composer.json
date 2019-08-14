@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Mks_Responsivebannerslider",
+    "type": "magento-module",
+    "license": "OSL",
+    "homepage": "",
+    "description": "Responsive Banner slider  extension displays unlimited sliders  & allow to view stats reports.",
+    "authors": [
+    {
+        "name": "Mukesh Kumar Saini",
+        "email": "in.mukeshsaini@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
