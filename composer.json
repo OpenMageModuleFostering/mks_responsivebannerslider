@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Mks_Responsivebannerslider",
+    "name": "OpenMageModuleFostering\/Mks_Responsivebannerslider",
     "type": "magento-module",
     "license": "OSL",
     "homepage": "",
     "description": "Responsive Banner slider no jQuery conflict Banner slider.Responsive Banner slider increase banner look.",
     "authors": [
-    {
-        "name": "Mukesh Kumar saini",
-        "email": "in.mukeshsaini@gmail.com"
-    }
-],
+        {
+            "name": "Mukesh Kumar saini",
+            "email": "in.mukeshsaini@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
