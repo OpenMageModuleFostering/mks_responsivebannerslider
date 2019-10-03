@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Mks_Responsivebannerslider",
+    "name": "openmage-module-fostering\/mks_responsivebannerslider",
     "type": "magento-module",
-    "license": "OSL",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Responsive Banner slider no jQuery conflict Banner slider.Responsive Banner slider increase banner look.",
     "authors": [
